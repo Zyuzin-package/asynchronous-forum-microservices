@@ -15,21 +15,23 @@ import org.springframework.kafka.config.TopicBuilder;
 import org.springframework.kafka.core.*;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerializer;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
+@Component
 public class KafkaConfig {
 
     @Value("${spring.kafka.topic}")
-    public static String topic;
+    public  String topic;
 
     @Value("${spring.kafka.group-id}")
-    public static String groupId;
+    public  String groupId;
 
     @Value("${spring.kafka.bootstrap-servers}")
-    public static String bootstrapServer;
+    public  String bootstrapServer;
 
     @Bean
     public ConsumerFactory<String, String> consumerFactory() {
@@ -51,7 +53,7 @@ public class KafkaConfig {
 
     @Bean
     public ProducerFactory<String, String> producerFactory() {
-
+        System.out.println(bootstrapServer+"\n" + groupId +"\n" + topic);
         Map<String, Object> props = new HashMap<>();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
