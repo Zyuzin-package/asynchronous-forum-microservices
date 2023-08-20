@@ -1,4 +1,6 @@
 spring:
+  kafka:
+    bootstrap-servers: localhost:29092
   jpa:
     database: POSTGRESQL
     show-sql: true
@@ -10,14 +12,3 @@ spring:
     username: postgres
     password: root
     driverClassName: org.postgresql.Driver
-
-server:
-  port: 8081
-kafka:
-  consumer:
-    id: consumerServer
-  producer:
-    id: producerServer
-  server: localhost:9092
-  group:
-    id: server.broadcast
