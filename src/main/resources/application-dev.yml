@@ -1,0 +1,20 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:29092
+    topic: prod-topic
+    group-id: group-1
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+    driverClassName: org.postgresql.Driver
+
+test:
+  topic: embedded-test-topic
+
