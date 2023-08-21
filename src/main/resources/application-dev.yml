@@ -1,13 +1,9 @@
 spring:
-  kafka:
-    bootstrap-servers: localhost:29092
-    topic: prod-topic
-    group-id: group-1
   jpa:
     database: POSTGRESQL
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
   datasource:
     platform: postgres
     url: jdbc:postgresql://localhost:5432/postgres
@@ -15,6 +11,14 @@ spring:
     password: root
     driverClassName: org.postgresql.Driver
 
+  kafka:
+    bootstrap-servers: localhost:29092
+    topic: prod-topic
+    group-id: group-1
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
 test:
   topic: embedded-test-topic
 
