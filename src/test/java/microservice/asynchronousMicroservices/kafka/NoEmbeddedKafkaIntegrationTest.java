@@ -1,7 +1,7 @@
 package microservice.asynchronousMicroservices.kafka;
 
-import microservice.asynchronousMicroservices.consumer.Cons;
-import microservice.asynchronousMicroservices.producer.Prod;
+import microservice.asynchronousMicroservices.kafka.consumer.Cons;
+import microservice.asynchronousMicroservices.kafka.producer.Prod;
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.common.Node;
 import org.junit.Before;
