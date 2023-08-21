@@ -1,17 +1,16 @@
-package microservice.asynchronousMicroservices.producer;
+package microservice.asynchronousMicroservices.kafka.producer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 @Slf4j
+@Profile("${config.kafka.environment}")
 @Component
 //@RequiredArgsConstructor
 public class Prod {
-
-//    @Value("${spring.kafka.topic}")
-//    private String topic;
 
     private static  KafkaTemplate<String, String> kafkaTemplate;
 
