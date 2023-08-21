@@ -1,4 +1,4 @@
-package microservice.asynchronousforummicroservices;
+package microservice.asynchronousMicroservices.kafka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package microservice.asynchronousforummicroservices.config;
+package microservice.asynchronousMicroservices.config;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.consumer.ConsumerConfig;

@@ -1,7 +1,7 @@
-package microservice.asynchronousforummicroservices;
+package microservice.asynchronousMicroservices.kafka;
 
-import microservice.asynchronousforummicroservices.consumer.Cons;
-import microservice.asynchronousforummicroservices.producer.Prod;
+import microservice.asynchronousMicroservices.consumer.Cons;
+import microservice.asynchronousMicroservices.producer.Prod;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
