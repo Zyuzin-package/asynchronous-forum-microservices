@@ -1,9 +1,9 @@
 package microservice.asynchronousMicroservices.REST.service;
 
-import microservice.asynchronousMicroservices.REST.service.impl.documentService;
+import microservice.asynchronousMicroservices.REST.service.impl.DocumentService;
 import microservice.asynchronousMicroservices.models.domain.Document;
 
-public class documentServiceImpl implements documentService {
+public class DocumentServiceImpl implements DocumentService {
     @Override
     public Document save(Document document) {
         return null;

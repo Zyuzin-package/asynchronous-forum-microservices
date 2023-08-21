@@ -4,6 +4,6 @@ import microservice.asynchronousMicroservices.models.domain.Document;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface documentService {
+public interface DocumentService {
     Document save(Document document);
 }
