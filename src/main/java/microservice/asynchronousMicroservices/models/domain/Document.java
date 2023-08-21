@@ -1,4 +1,4 @@
-package microservice.asynchronousMicroservices.domain;
+package microservice.asynchronousMicroservices.models.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -6,8 +6,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-import lombok.*;
-import org.hibernate.annotations.UuidGenerator;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
@@ -16,7 +14,7 @@ import jakarta.persistence.*;
 @Table(name = "documents"
         ,schema = "public"
 )
-public class DocumentDomain {
+public class Document {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,10 +32,10 @@ public class DocumentDomain {
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     private LocalDateTime addedTime;
 
-    public DocumentDomain() {
+    public Document() {
     }
 
-    public DocumentDomain(Long id, String documentName, String pathToDocument, boolean processingStatus, LocalDateTime addedTime) {
+    public Document(Long id, String documentName, String pathToDocument, boolean processingStatus, LocalDateTime addedTime) {
         this.id = id;
         this.documentName = documentName;
         this.pathToDocument = pathToDocument;
