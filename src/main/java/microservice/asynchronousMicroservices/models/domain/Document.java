@@ -9,12 +9,13 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
+import microservice.asynchronousMicroservices.models.api.Model;
 
 @Entity
 @Table(name = "documents"
         ,schema = "public"
 )
-public class Document {
+public class Document implements Model {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
